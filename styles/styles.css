@@ -1,3 +1,20 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    align-items: start;
+}
+
+    main {
+        grid-column: 2;
+        margin: 1rem;
+    }
+
+header, .grid, footer {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,12 +26,18 @@ body {
 }
 nav {
     background-color: burlywood;
-    padding: 10px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 nav a {
-    color: white;
     display: block;
     padding: 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
 } 
 
 h1 {
@@ -24,6 +47,8 @@ h1 {
 
 main {
     max-width: 640px;
+    margin: 1rem;
+    grid-column: 2;
 }
 
 main img {
@@ -46,12 +71,15 @@ img {
     height: auto;
     border: 1px solid black;
     box-shadow: 0 0 30px gray;
+    
 }
 
-aside {
-    width: 20rem;
+aside { /* this is the block of santo domingo */
+    grid-column: 1;
+    grid-row: 1;
+    width: auto;
     text-align: center;
-    position: relative;
+    align-self: start;
 }
 
 aside img {
@@ -59,9 +87,10 @@ aside img {
     height: auto;
 }
 aside h2 {
-    position: absolute;
+    position: relative;
     top: px;
     left: 15px;
+    grid-column: 1/4;
 }
 
 footer {
