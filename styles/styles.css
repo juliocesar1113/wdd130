@@ -80,6 +80,7 @@ aside { /* this is the block of santo domingo */
     width: auto;
     text-align: center;
     align-self: start;
+    position: relative;
 }
 
 aside img {
